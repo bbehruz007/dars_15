@@ -1,0 +1,113 @@
+:root {
+    --font-family: "Rubik", sans-serif;
+    --second-family: "Noto Sans", sans-serif;
+    --third-family: "Montserrat", sans-serif;
+    --font3: "Dancing Script", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E5E5E5;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 184px;
+    background-color: #F8FAFD;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.header-container .hdr-btn {
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+    background: #0d75ff;
+    border-radius: 4px;
+    padding: 12px 54px;
+    border: none;
+}
+
+.book-container {
+    background-color: #F8FAFD;
+}
+
+.book-container .links {
+    list-style: none;
+    flex-wrap: wrap;
+    margin-bottom: 33px;
+    display: flex;
+    gap: 35px;
+    padding-bottom: 50px;
+}
+
+.book-container .link {
+    border: 0px solid #e3e6eb;
+    border-radius: 5px;
+    width: 280px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 30px 20px 20px 20px;
+}
+
+.book-container .logo {
+    display: block;
+    margin: 0 auto;
+}
+
+
+.book-container .btn-yellow {
+    font-weight: 500;
+    font-size: 14px;
+    color: #000;
+    background: #ffd80d;
+    border-radius: 4px;
+    padding: 10px 20px;
+    border: none;
+    margin-right: 10px;
+}
+
+.book-container .btn-blue {
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #0d75ff;
+    border: none;
+    padding: 10px 20px;
+}
+
+.book-container .btn-read {
+    border-radius: 4px;
+    background: #75828a;
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+    padding: 10px 102px;
+    border: none;
+    margin-top: 5px;
+}
+
+.book-container .heading {
+    font-weight: 500;
+    font-size: 18px;
+    color: #000;
+    margin-top: 3px;
+}
+
+.book-container .text {
+    font-weight: 500;
+    font-size: 13px;
+    color: #757881;
+    margin-top: 3px;
+}

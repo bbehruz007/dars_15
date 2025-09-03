@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin panel</title>
+
+    <link rel="stylesheet" href="./admin.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="table-data">
+        <div class="table-head">
+            <h1 class="heading">Kitoblar</h1>
+            <button class="add-btn" onclick="showAddModal()">Yangi qo'shish</button>
+        </div>
+
+        <table class="table" border="1">
+            <thead>
+                <tr>
+                    <th class="th">Id</th>
+                    <th class="th">Nomi</th>
+                    <th class="th">Muallifi</th>
+                    <th class="th">Yili</th>
+                    <th class="th">Rasmi</th>
+                    <th>Kitob linki</th>
+                    <th class="th">Amallar</th>
+                </tr>
+            </thead>
+
+            <tbody id="tbody">
+                <!-- <tr>
+                    <td>1</td>
+                    <td>Pride and Prejudice</td>
+                    <td>Jane Austen</td>
+                    <td>1188</td>
+                    <td><img width="80px"
+                            src="https://www.gutenberg.org/cache/epub/1661/pg1661.cover.medium.jpg"
+                            alt="rasm"></td>
+                    <td><a class="teg" href="#">Link</a></td>
+                    <td>
+                        <div class="buttons">
+                            <img width="40px"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVH_dVrxYlT3A4z2JQNoLnXK5rr9336c1Flw&s"
+                                alt="delete">
+                            <img width="30px"
+                                src="https://icons.veryicon.com/png/o/miscellaneous/linear-small-icon/edit-246.png"
+                                alt="edit">
+                        </div>
+                    </td>
+                </tr> -->
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="add-modal" id="add_modal">
+        <div class="overlay" onclick="hiddenAddModal()"></div>
+
+        <form class="form" id="form">
+            <input class="input" type="text" id="nom" placeholder="Nomini kiriting...">
+            <input class="input" type="text" id="muallif" placeholder="Muallifini kiriting...">
+            <input class="input" type="number" id="yil" placeholder="Yilini kiriting...">
+            <input class="input" type="text" id="link" placeholder="Linkini kiriting...">
+            <input class="input" type="file" id="image" accept="image/*">
+
+            <button class="add-btn" type="submit">Qo'shish</button>
+        </form>
+    </div>
+
+    <div class="delete-modal" id="delete_modal">
+        <div class="overlay" onclick="hiddenDeleteModal()"></div>
+
+        <div class="delete-box">
+            <h2 class="heading">Ushbu talabani o'chirmoqchimisiz?</h2>
+
+            <div class="buttons">
+                <button class="btn-no" onclick="hiddenDeleteModal()">Yo'q</button>
+                <button class="btn-yes" onclick="deleteItem()">Ha</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="edit-modal" id="edit_modal">
+        <div class="overlay" onclick="hiddenEditModal()"></div>
+
+        <form class="form" id="form2">
+            <input class="input" type="text" id="nom2" placeholder="Nomini kiriting...">
+            <input class="input" type="text" id="muallif2" placeholder="Muallifini kiriting...">
+            <input class="input" type="number" id="yil2" placeholder="Yilini kiriting...">
+            <input class="input" type="text" id="link2" placeholder="Linkini kiriting...">
+            <input class="input" type="text" id="image2" placeholder="Rasm linkini kiriting...">
+            <!-- <input class="input" type="file" id="image" accept="image/*"> -->
+
+            <button class="add-btn" type="submit">O'zgartirish</button>
+        </form>
+    </div>
+
+
+
+    <script src="./data.js"></script>
+    <script src="./admin.js"></script>
+</body>
+
+</html>
